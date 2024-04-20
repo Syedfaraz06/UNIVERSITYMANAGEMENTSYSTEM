@@ -21,20 +21,21 @@ public class About extends JFrame {
         heading.setFont(new Font("Tahoma", Font.BOLD, 30));
         add(heading);
         
-        JLabel name = new JLabel("Developed By: Rachit Gupta");
-        name.setBounds(70, 220, 550, 40);
-        name.setFont(new Font("Tahoma", Font.BOLD, 30));
+        JLabel name = new JLabel("<html><b>Developed By:</b><br>SYED FARAZ AHMED,<br>THIPPANI SONALI BONICCA,<br>RIJAN RAYAMAJHI</html>");
+        name.setBounds(70, 220, 550, 100); // Adjust height to accommodate multiple lines
+        name.setFont(new Font("Tahoma", Font.BOLD, 20)); // Decrease font size for better readability
         add(name);
-        
-        JLabel rollno = new JLabel("Roll number: 2021BCSE07AED032");
-        rollno.setBounds(70, 280, 550, 40);
-        rollno.setFont(new Font("Tahoma", Font.PLAIN, 30));
+
+        JLabel rollno = new JLabel("<html><b>Roll number:</b><br>2021BIFT07AED023,<br>2021BIFT07AED029,<br>2021BIFT07AED011</html>"); 
+        rollno.setBounds(70, 340, 550, 100); // Adjust height to accommodate multiple lines
+        rollno.setFont(new Font("Tahoma", Font.PLAIN, 20)); // Decrease font size for better readability
         add(rollno);
         
-        JLabel contact = new JLabel("Contact: rachitrajgupta2020@gmail.com");
-        contact.setBounds(70, 340, 550, 40);
-        contact.setFont(new Font("Tahoma", Font.PLAIN, 20));
+        JLabel contact = new JLabel("<html><b>Contact:</b><br>syedfarazahmed777@gmail.com,<br>sthippani@gmail.com,<br>rrijanBTECH21@ced.alliance.edu.in</html>");
+        contact.setBounds(70, 460, 550, 100); // Adjust height to accommodate multiple lines
+        contact.setFont(new Font("Tahoma", Font.PLAIN, 20)); // Decrease font size for better readability
         add(contact);
+
         
         setLayout(null);
         

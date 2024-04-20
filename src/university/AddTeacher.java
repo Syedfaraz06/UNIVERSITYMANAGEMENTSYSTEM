@@ -4,6 +4,7 @@ import java.awt.*;
 import java.util.*;
 import com.toedter.calendar.JDateChooser;
 import java.awt.event.*;
+import java.text.SimpleDateFormat;
 
 public class AddTeacher extends JFrame implements ActionListener{
     
@@ -165,7 +166,9 @@ public class AddTeacher extends JFrame implements ActionListener{
             String name = tfname.getText();
             String fname = tffname.getText();
             String rollno = labelempId.getText();
-            String dob = ((JTextField) dcdob.getDateEditor().getUiComponent()).getText();
+             Date date = dcdob.getDate();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            String dob = sdf.format(date);
             String address = tfaddress.getText();
             String phone = tfphone.getText();
             String email = tfemail.getText();

@@ -2,7 +2,7 @@ package university;
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
-import net.proteanit.sql.DbUtils;
+
 
 public class FeeStructure extends JFrame {
     
@@ -40,4 +40,4 @@ public class FeeStructure extends JFrame {
     public static void main(String[] args) {
         new FeeStructure();
     }
-}
+} 

@@ -3,6 +3,7 @@ package university;
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
+import java.text.SimpleDateFormat;
 import com.toedter.calendar.JDateChooser;
 import java.awt.event.*;
 
@@ -15,7 +16,7 @@ public class AddStudent extends JFrame implements ActionListener{
     JButton submit,cancel;
     
     Random ran=new Random();
-    long first4=Math.abs((ran.nextLong() %9000L)+1000L);
+    long first3=Math.abs((ran.nextLong() %9000L)+1000L);
     
     
     AddStudent(){
@@ -53,7 +54,7 @@ public class AddStudent extends JFrame implements ActionListener{
         lblfrollno.setFont(new Font("serif",Font.BOLD,20));
         add(lblfrollno);
         
-        labelrollno=new JLabel("2021BCSE07AED"+first4);
+        labelrollno=new JLabel("2021BIFT07AED"+first3);
         labelrollno.setBounds(200,200,200,30);
         labelrollno.setFont(new Font("serif",Font.BOLD,20));
         add(labelrollno);
@@ -169,7 +170,9 @@ public class AddStudent extends JFrame implements ActionListener{
             String name=tfname.getText();
             String fname=tffname.getText();
             String rollno=labelrollno.getText();
-            String dob=((JTextField) dcdob.getDateEditor().getUiComponent()).getText();
+             Date date = dcdob.getDate();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            String dob = sdf.format(date);
             String address=tfaddress.getText();
             String phone=tfphone.getText();
             String email=tfemails.getText();
